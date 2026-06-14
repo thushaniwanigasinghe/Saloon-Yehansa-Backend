@@ -1,5 +1,6 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-require("dotenv").config({ path: "../.env" });
+const path = require('path');
+require("dotenv").config({ path: path.join(__dirname, '../.env') });
 
 async function listModels() {
   try {
